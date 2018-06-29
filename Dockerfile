@@ -1,6 +1,5 @@
-ARG wildfly_version
 FROM java:openjdk-8-alpine
-ENV wildfly_version $wildfly_version
+ARG wildfly_version
 ENV MYSQL_DRIVER_VERSION mysql-connector-java-5.1.40
 RUN apk add --no-cache openssh supervisor wget
 RUN mkdir -p /tmp/downloads
